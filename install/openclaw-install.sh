@@ -38,7 +38,7 @@ cat <<'EOF' >"$DOCKER_CONFIG_PATH"
   "storage-driver": "overlay2"
 }
 EOF
-$STD sh <(curl -fsSL https://get.docker.com)
+$STD sh <(curl -fsSL https://get.docker.com | bash -s docker --mirror Aliyun)
 $STD systemctl enable --now docker
 msg_ok "Installed Docker $DOCKER_LATEST_VERSION"
 
